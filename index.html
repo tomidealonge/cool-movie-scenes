@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quotes, Sayings and Favourite Scenes</title>
+    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css" />
+    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting-cells.css" />
+    <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="movies.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <div class="movie-video absolute right">
+            <video autoplay="" loop="" muted="" playsinline="">
+                <source src="https://dl.dropboxusercontent.com/s/erp4gl6xgemelql/Top%20Crust%20HomePage.mp4" type="video/mp4" />
+            </video>
+        </div>
+        <div class="movie-video absolute center">
+            <video autoplay="" loop="" muted="" playsinline="">
+                <source src="https://dl.dropboxusercontent.com/s/erp4gl6xgemelql/Top%20Crust%20HomePage.mp4" type="video/mp4" />
+            </video>
+        </div>
+        <div class="movie-video absolute left">
+            <video autoplay="" loop="" muted="" playsinline="">
+                <source src="https://dl.dropboxusercontent.com/s/erp4gl6xgemelql/Top%20Crust%20HomePage.mp4" type="video/mp4" />
+            </video>
+        </div>
+        <div class="logo">TOMIDE & JOSH</div>
+        <div data-aos="fade-up" data-aos-duration="3000"  class="hero-text">
+            <h1>Quotes, Sayings &</h1>
+            <h1 class="red-text">Favourite Scenes</h1>
+            <p>from movies and TV Shows</p>
+        </div>
+    </header>
+    <section>
+        <div class="movie-and-quote">
+            <div class="movie-video">
+                <video autoplay="" loop="" muted="" playsinline="">
+                    <source
+                        src="https://dl.dropboxusercontent.com/s/erp4gl6xgemelql/Top%20Crust%20HomePage.mp4" type="video/mp4" />
+                </video>
+            </div>
+            <div data-aos="fade-up" data-aos-duration="3000" class="movie-quote">
+            
+                <h2 class="quote-heading red-text">
+                    The Dark Knight Rises
+                </h2>
+                <p class="split-test" data-splitting>“You think darkness is your ally. But you merely adopted the dark.”</p>
+            </div>
+        </div>
+        <div  class="movie-and-quote">
+            <div class="movie-video">
+                <video autoplay="" loop="" muted="" playsinline="">
+                    <source src="https://dl.dropboxusercontent.com/s/erp4gl6xgemelql/Top%20Crust%20HomePage.mp4"
+                        type="video/mp4" />
+                </video>
+            </div>
+            <div data-aos="fade-up" data-aos-duration="3000" class="movie-quote">
+                <h2 class="quote-heading red-text">
+                    The Dark Knight Rises
+                </h2>
+                <p class="split-test" data-splitting>“You think darkness is your ally. But you merely adopted the dark. You think darkness is your ally. But you merely adopted the dark. You think darkness is your ally. But you merely adopted the dark.”</p>
+            </div>
+        </div>
+    </section>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init()</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"
+        integrity="sha512-1dalHDkG9EtcOmCnoCjiwQ/HEB5SDNqw8d4G2MKoNwjiwMNeBAkudsBCmSlMnXdsH8Bm0mOd3tl/6nL5y0bMaQ=="
+        crossorigin="anonymous"></script>
+    <script src="js/app.js"></script>
+    <script> Splitting(); </script>
+</body>
+</html>
