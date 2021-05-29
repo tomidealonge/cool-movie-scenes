@@ -5,12 +5,13 @@ body {
 }
 
 @font-face {
-  font-family: Heading;
-  src: url('/assets/MADE\ Outer\ Sans\ Bold\ PERSONAL\ USE.otf');
+    font-family: Heading;
+    src: url('/assets/fonts/outer-sand-bold.otf');
 }
+
 @font-face {
-  font-family: body;
-  src: url('./assets/MADE\ Outer\ Sans\ Thin\ PERSONAL\ USE.otf');
+    font-family: body;
+    src: url('./assets/fonts/outer-sans-thin.otf');
 }
 
 h1 {
@@ -19,6 +20,7 @@ h1 {
     line-height: 70px;
     margin: 5px
 }
+
 h2 {
     font-family: Heading;
     font-size: 42px;
@@ -26,7 +28,7 @@ h2 {
     margin: 5px
 }
 
-p{
+p {
     font-family: body;
     font-size: 20px;
     font-weight: 100;
@@ -49,17 +51,22 @@ header {
 
 .hero-text {
     margin-top: 5vw;
-    z-index: 1000;
+    z-index: 100;
 }
 
-.logo{
-    margin-top: 5vh;
-    position: absolute;
-    top: 5vh;
-    left: auto;
-    right: auto;
-    font-family: Heading;
-    font-size: 20px;
+.logo {
+    margin: 0 auto;
+    height: 5vw;
+    width: 5vw;
+    min-width: 40px;
+    min-height: 40px;
+    background-image: url('./assets/images/logo-white.png');
+    background-position: center 0%;
+    background-size: 60%;
+    background-repeat: no-repeat;
+    position: fixed;
+    left: 0;
+    right: 0;
     z-index: 1000;
 }
 
@@ -78,52 +85,121 @@ header {
     background-color: gray;
     width: 500px;
     height: 500px;
-    border-radius: 54% 46% 42% 58% / 60% 58% 42% 40% ;
+    border-radius: 54% 46% 42% 58% / 60% 58% 42% 40%;
     flex-shrink: 0;
     overflow: hidden;
     transition: all 500ms ease-in-out;
-    animation: wave 15s ease-in-out infinite;
+    animation: wave 10s ease-in-out infinite;
 }
 
-
-.absolute {
-    position: absolute;
-    width: 200px;
-    height: 200px;
+.fixed {
+    position: fixed;
+    width: 250px;
+    height: 250px;
+    transition: all 500ms ease-in-out;
 }
 
-.absolute.center  {
-    border-radius: 24% 36% 22% 68% / 40% 18% 62% 20% ;
-    opacity: 0.1;
+.fixed.center {
+    border-radius: 52% 40% 48% 51% / 69% 53% 45% 39%;
+    top: 5%;
+    animation: movementone 100s ease-in-out infinite;
+    background-image: url('https://media.giphy.com/media/UJritU1m8L6ycoFQQ6/giphy.gif');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
-.absolute.left  {
-    border-radius: 24% 36% 22% 68% / 40% 18% 62% 20% ;
+.fixed.left {
+    border-radius: 56% 43% 40% 57% / 61% 53% 44% 43%;
     left: -50px;
-    opacity: 0.1;
+    bottom: 40%;
+    animation: movementtwo 50s ease-in-out infinite;
+    background-image: url('https://media.giphy.com/media/9S86TxTHwlVZGBwVy7/giphy.gif');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
-.absolute.right  {
-    border-radius: 14% 26% 42% 68% / 20% 28% 42% 20% ;
+.fixed.right {
+    border-radius: 51% 47% 42% 56% / 62% 58% 52% 47%;
     right: 10px;
-    top: 15px;
-    opacity: 0.1;
+    bottom: 15px;
+    animation: movementthree 50s ease-in-out 0.4s infinite;
+    background-image: url('https://media.giphy.com/media/39yLSy1yfJDJDBoLlo/giphy.gif');
+    background-position: center;
+    background-size: 280%;
+    background-repeat: no-repeat;
 }
 
-.absolute > video {
+@keyframes movementone {
+    0% {
+        transform: translateX(400px)
+    }
+    20% {
+        transform: translateY(100px);
+    }
+    40% {
+        transform: translateX(-150px);
+    }
+    60% {
+        transform: translateY(-40px);
+    }
+    80% {
+        transform: translateX(40px)
+    }
+}
+
+@keyframes movementtwo {
+    0% {
+        transform: translate(-120px)
+    }
+    20% {
+        transform: translateY(100px);
+    }
+    40% {
+        transform: translateX(4px);
+    }
+    60% {
+        transform: translateY(-20px);
+    }
+    80% {
+        transform: translateX(-120px)
+    }
+}
+
+@keyframes movementthree {
+    0% {
+        transform: translateY(-60px)
+    }
+    20% {
+        transform: translateX(-30px);
+    }
+    40% {
+        transform: translateX(20px);
+    }
+    60% {
+        transform: translateY(-100px);
+    }
+    80% {
+        transform: translateY(-60px)
+    }
+}
+
+.fixed>video {
     opacity: 1;
 }
 
-.movie-video:hover {
-   animation: wave 10s ease-in-out infinite;
-}
+
+/* .movie-video:hover {
+    animation: wave 10s ease-in-out infinite;
+} */
 
 video {
     opacity: 0;
     transition: all 500ms ease-in-out;
 }
 
-.movie-video:hover > video {
+.movie-video:hover>video {
     opacity: 1;
 }
 
@@ -144,10 +220,10 @@ video {
 
 .movie-quote {
     margin-left: -100px;
-    z-index: 1;
+    z-index: 100;
     width: 570px
 }
 
-.movie-quote:nth-child(even){
+.movie-quote:nth-child(even) {
     margin-right: -100px
 }
