@@ -41,7 +41,9 @@ p {
 
 header {
     height: 100vh;
+    width: 100%;
     display: flex;
+    overflow: hidden;
     flex-direction: column;
     align-items: center;
     text-align: center;
@@ -85,6 +87,7 @@ header {
     background-color: gray;
     width: 500px;
     height: 500px;
+    z-index: 100;
     border-radius: 54% 46% 42% 58% / 60% 58% 42% 40%;
     flex-shrink: 0;
     overflow: hidden;
@@ -93,16 +96,19 @@ header {
 }
 
 .fixed {
-    position: fixed;
+    position: absolute;
     width: 250px;
     height: 250px;
-    transition: all 500ms ease-in-out;
+    transition: none;
 }
 
 .fixed.center {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     border-radius: 52% 40% 48% 51% / 69% 53% 45% 39%;
-    top: 5%;
-    animation: movementone 100s ease-in-out infinite;
     background-image: url('https://media.giphy.com/media/UJritU1m8L6ycoFQQ6/giphy.gif');
     background-position: center;
     background-size: cover;
@@ -110,10 +116,12 @@ header {
 }
 
 .fixed.left {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     border-radius: 56% 43% 40% 57% / 61% 53% 44% 43%;
-    left: -50px;
-    bottom: 40%;
-    animation: movementtwo 50s ease-in-out infinite;
     background-image: url('https://media.giphy.com/media/9S86TxTHwlVZGBwVy7/giphy.gif');
     background-position: center;
     background-size: cover;
@@ -121,68 +129,16 @@ header {
 }
 
 .fixed.right {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     border-radius: 51% 47% 42% 56% / 62% 58% 52% 47%;
-    right: 10px;
-    bottom: 15px;
-    animation: movementthree 50s ease-in-out 0.4s infinite;
     background-image: url('https://media.giphy.com/media/39yLSy1yfJDJDBoLlo/giphy.gif');
     background-position: center;
     background-size: 280%;
     background-repeat: no-repeat;
-}
-
-@keyframes movementone {
-    0% {
-        transform: translateX(400px)
-    }
-    20% {
-        transform: translateY(100px);
-    }
-    40% {
-        transform: translateX(-150px);
-    }
-    60% {
-        transform: translateY(-40px);
-    }
-    80% {
-        transform: translateX(40px)
-    }
-}
-
-@keyframes movementtwo {
-    0% {
-        transform: translate(-120px)
-    }
-    20% {
-        transform: translateY(100px);
-    }
-    40% {
-        transform: translateX(4px);
-    }
-    60% {
-        transform: translateY(-20px);
-    }
-    80% {
-        transform: translateX(-120px)
-    }
-}
-
-@keyframes movementthree {
-    0% {
-        transform: translateY(-60px)
-    }
-    20% {
-        transform: translateX(-30px);
-    }
-    40% {
-        transform: translateX(20px);
-    }
-    60% {
-        transform: translateY(-100px);
-    }
-    80% {
-        transform: translateY(-60px)
-    }
 }
 
 .fixed>video {
